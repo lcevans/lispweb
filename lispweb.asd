@@ -1,11 +1,10 @@
 ;;;; lispweb.asd
 
 (asdf:defsystem #:lispweb
-  :description "Describe lispweb here"
-  :author "Your Name <your.name@example.com>"
-  :license "Specify license here"
-  :depends-on (#:hunchentoot)
+  :description "A simple Webapp in LISP"
+  :author "Chris Evans"
+  :license "TBD"
+  :depends-on (#:hunchentoot #:cl-who)
   :serial t
   :components ((:file "package")
                (:file "lispweb")))
-
