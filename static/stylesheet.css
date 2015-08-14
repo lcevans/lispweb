@@ -1,0 +1,29 @@
+.logo {
+    width : 25px;
+    height : 25px;
+}
+
+#header {
+    font-family: Verdana, Geneva, sans-serif;
+    background : #ff6600;
+    color : #000000;
+}
+
+.rn-background {
+    background : #f6f6ef;
+    color : #828282;
+}
+
+.rn-background ul {
+    list-style : none;
+}
+
+a {
+    text-decoration : none;
+    color : #000000;
+}
+
+.strapline {
+    font-weight: bold;
+
+}

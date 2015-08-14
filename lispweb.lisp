@@ -16,7 +16,7 @@
 (defun upvote-post (post) (incf (votes post)))
 (defun downvote-post (post) (decf (votes post)))
 
-(defvar post1 (make-instance 'post :title "Why aren't we living in underwater cities?" :body "20,000 Leagues under the Sea was written 150 years ago!" :votes 12))
+(defvar post1 (make-instance 'post :title "Why arent we living in underwater cities?" :body "20,000 Leagues under the Sea was written 150 years ago!" :votes 12))
 (defvar post2 (make-instance 'post :title "Improve productivity by standing on your head." :body "Studies show key is more blood and oxygen to the brain." :votes 4))
 (defvar post3 (make-instance 'post :title "Glrky Sold for $3B." :body "The market for automated cutlery is hot right now!" :votes -1))
 
@@ -52,7 +52,10 @@
                                                                           :alt "Roller News logo"
                                                                                  :class "logo")
                                                               (:span :class "strapline"
-                                                                     "Roller News: All the news that's fit to roll."))
+                                                                     "Roller News")
+                                                              (:a :href "roller-news.html" "new")
+                                                              " | "
+                                                              (:a :href "new-post.html" "submit"))
                                                          ,@body))))
 
 
@@ -66,7 +69,6 @@
 
 (define-url-fn (roller-news)
    (standard-page (:title "Roller News")
-     (:p (:a :href "new-post.html" "Submit New Post"))
      (:div :class "rn-background"
      (:ul
       (dolist (post (posts))
@@ -106,7 +108,7 @@
                      :name "title"
                      :class "txt"))
          (:p "Body: "
-             (:input :type "text"
+             (:textarea :type "textarea"
                      :name "body"
                      :class "txt"))
          (:p (:input :type "submit"
